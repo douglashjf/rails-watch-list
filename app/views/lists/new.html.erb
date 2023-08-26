@@ -3,5 +3,8 @@
   <%= simple_form_for @list do |f| %>
     <%= f.input :name, placeholder: "any genre you want!" %>
     <%= f.button :submit, class: "btn btn-success" %>
+    <%= f.input :photo, as: :file %>
   <% end %>
+
+    <%= link_to '< All lists', lists_path %>
 </div>

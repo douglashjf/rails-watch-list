@@ -1,0 +1,25 @@
+
+<% collection.each do |list| %>
+  <div class="cards">
+  <% if list.photo.attached? %>
+    <div class="card-category" style="background-image: url('<%= cl_image_path list.photo.key, width: 400, height: 300, crop: :fill %>')">
+  <% else %>
+    <div class="card-category" >
+  <% end %>
+      <%= link_to list.name, list_path(list) %>
+    </div>
+  </div>
+<% end %>
+
+<%#
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      Breakfast
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+      Lunch
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+      Dinner
+    </div> %>
